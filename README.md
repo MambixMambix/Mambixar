@@ -21,4 +21,4 @@ You do not need to use the terminal or navigate paths.
 * **On PC:** Simply double-click `run_mambixar.py`. A visual file window will pop up automatically. Select your `.mbx` file, and it will execute instantly.
 * **On Mobile:** Open `mambixar.py` in your local Python app and press the **Run/Play** button. Use the on-screen file selector to choose your `.mbx` file.
 
-I hope this becomes a mainstream language and gets an IDE or a place in termux.
+Once again, i hope this becomes a mainstream language and gets an IDE or a place in termux.
