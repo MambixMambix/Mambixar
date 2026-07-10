@@ -1,0 +1,32 @@
+======================================================================
+                     MAMBIXAR SYSTEM ARCHITECTURE                     
+======================================================================
+
+[EXECUTION ENGINE]
+- Line Processing: Descending Gravity Sort (Longest -> Shortest line).
+- Syntax Rule: Absolutely NO whitespace padding allowed.
+- Entry Pointer: Line containing 'y'.
+- Exit Pointer: 'γ' terminates instantly.
+
+[DYNAMIC MUTATION MECHANICS]
+Every processed character permanently mutates the global token map.
+The opcode mapping rules invert based on line-length parity:
+
+Character | Action if Length is EVEN   | Action if Length is ODD
+----------|----------------------------|--------------------------
+o         | Push 1                     | Add
+о         | Add                        | Push 1
+Ρ         | Multiply                   | Multiply
+P         | Subtract                   | Subtract
+[         | Mark Loop                  | Jump
+]         | Jump                       | Mark Loop
+0         | Inject Data                | Discard Top of Stack
+~         | Output ASCII               | Output Unicode
+=         | Output Raw Int             | Output Raw String
+y         | Entry Anchor               | Entry Anchor
+γ         | Exit Anchor                | Exit Anchor
+
+[RUNTIME POLICY]
+- Error Reporting: DEPRECATED. All faults trigger immediate, silent exit.
+- Memory State: Hard-allocated native array blocks. Absolute zero visibility.
+======================================================================
