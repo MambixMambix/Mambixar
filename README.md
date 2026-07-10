@@ -5,7 +5,7 @@ Welcome to Mambixar, a lightweight, ultra-high-speed, zero-dependency scripting 
 ## Features
 * **Zero Overhead:** Preallocated memory structures for blazing-fast execution.
 * **Deterministic Sorting:** Built-in structural optimization handles execution queuing natively.
-* **Minimalist Syntax:** No boilerplate, no formatting bloat—just pure code.
+* **Minimalist Syntax:** No boilerplate, no formatting bloat. just pure code.
 
 ## Getting Started
 
